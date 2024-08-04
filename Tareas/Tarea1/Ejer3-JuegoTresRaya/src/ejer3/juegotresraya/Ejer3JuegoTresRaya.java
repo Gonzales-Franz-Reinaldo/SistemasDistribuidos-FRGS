@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejer2.juegotresraya;
+package ejer3.juegotresraya;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Franz Gonzales
  */
-public class Ejer2JuegoTresRaya {
+public class Ejer3JuegoTresRaya {
 
     public static void main(String[] args) {
         // Instanciamos un objeto del juego
