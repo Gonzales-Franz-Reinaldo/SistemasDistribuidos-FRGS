@@ -12,10 +12,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author Franz Gonzales
  */
 public class TresEnRaya {
-//    Propiedades
+    //    Propiedades
     private char[][] tablero;
     
-//    Metodos
+    //    Metodos
     public void crearLlenarTablero(){
         tablero = new char[3][3];
         for(int i=0; i < tablero.length; i++){
@@ -117,33 +117,6 @@ public class TresEnRaya {
         return false;
     }
 
-    
-//    public boolean ganador(char marcador){
-////        Vericar filas
-//        if(tablero[0][0] == marcador && tablero[0][1] == marcador && tablero[0][2] == marcador){
-//            return true;
-//        }else if(tablero[1][0] == marcador && tablero[1][2] == marcador && tablero[1][2] == marcador){
-//            return true;
-//        }else if(tablero[2][0] == marcador && tablero[2][1] == marcador && tablero[2][2] == marcador){
-//            return true;
-//        }
-////        verificar columnas
-//        else if(tablero[0][0] == marcador && tablero[1][0] == marcador && tablero[2][0] == marcador){
-//            return true;
-//        }else if(tablero[0][1] == marcador && tablero[1][1] == marcador && tablero[2][1] == marcador){
-//            return true;
-//        }else if(tablero[0][2] == marcador && tablero[1][2] == marcador && tablero[2][2] == marcador){
-//            return true;
-//        }
-////        verificar diagonales
-//        else if(tablero[0][0] == marcador && tablero[1][1] == marcador && tablero[2][2] == marcador){
-//            return true;
-//        }else if(tablero[2][0] == marcador && tablero[1][1] == marcador && tablero[0][2] == marcador){
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }
 }
 
 

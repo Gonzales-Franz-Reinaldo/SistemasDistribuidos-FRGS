@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Ejer2JuegoTresRaya {
 
     public static void main(String[] args) {
+        // Instanciamos un objeto del juego
         TresEnRaya juegoTresRaya = new TresEnRaya();
         
        juegoTresRaya.crearLlenarTablero();
@@ -43,6 +44,6 @@ public class Ejer2JuegoTresRaya {
                break;
            }
            
-       }while(true);
+       } while(true);
     }
 }
