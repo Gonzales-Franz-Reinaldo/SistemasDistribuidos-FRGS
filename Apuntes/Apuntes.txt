@@ -1,0 +1,16 @@
+SIS258
+
+sistemas distribuidos son conjunto de computadoras interconectas para que haya conexión de sistemas.
+Se creo para compartir recursos en diferencias sistemas
+
+Propiedades
+- Consistencia. 
+- Transparencia   
+
+
+cliente manda el numero y el servidor manda el factorial
+
+
+Buscar una herramienta para VPN entre compañeros hacer para una red privada.
+
+Tarea factorial y Fibonacci. explicar que pasos hicimos.
