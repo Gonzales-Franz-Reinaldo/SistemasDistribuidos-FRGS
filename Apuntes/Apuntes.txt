@@ -14,3 +14,5 @@ cliente manda el numero y el servidor manda el factorial
 Buscar una herramienta para VPN entre compañeros hacer para una red privada.
 
 Tarea factorial y Fibonacci. explicar que pasos hicimos.
+
+Hacer el modo grafico con swean
