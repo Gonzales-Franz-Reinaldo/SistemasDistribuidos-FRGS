@@ -30,12 +30,19 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
 
     private void initSocket() {
         try {
+            // Establecer conexión con el servidor
             client = new Socket("localhost", 5002);
-            fromServer = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            toServer = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
 
+            // Inicializar flujos de entrada y salida
+            fromServer = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            toServer = new PrintWriter(new OutputStreamWriter(client.getOutputStream()), true);
+
+            // Leer el estado inicial desde el servidor
             String estadoInicial = fromServer.readLine();
             mostrar_estadoPalabra.setText(estadoInicial);
+
+            // Lanzar el hilo del Listener
+            new Thread(new Listener()).start();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "No se pudo conectar al servidor.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -54,19 +61,29 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
         mostrar_mensajeCorreccion = new javax.swing.JTextArea();
         resultado_juego = new javax.swing.JOptionPane();
         mostrar_titulo_bienvenida = new javax.swing.JLabel();
-        puntaje_errores = new java.awt.Label();
         jScrollPane2 = new javax.swing.JScrollPane();
         mostrar_estadoPalabra = new javax.swing.JTextArea();
+        puntaje_errores = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 51));
 
         ingresar_letra.setText("letra");
+        ingresar_letra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingresar_letraActionPerformed(evt);
+            }
+        });
 
         button_ingresarLetra.setBackground(new java.awt.Color(0, 153, 0));
         button_ingresarLetra.setForeground(new java.awt.Color(255, 255, 51));
         button_ingresarLetra.setText("Ingresar letra");
+        button_ingresarLetra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_ingresarLetraActionPerformed(evt);
+            }
+        });
 
         mostrar_mensajeCorreccion.setColumns(20);
         mostrar_mensajeCorreccion.setRows(5);
@@ -77,12 +94,16 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
         mostrar_titulo_bienvenida.setForeground(new java.awt.Color(51, 0, 51));
         mostrar_titulo_bienvenida.setText("JUEGO DEL AHORCADO");
 
-        puntaje_errores.setBackground(new java.awt.Color(255, 102, 102));
-        puntaje_errores.setText("label1");
-
         mostrar_estadoPalabra.setColumns(20);
         mostrar_estadoPalabra.setRows(5);
         jScrollPane2.setViewportView(mostrar_estadoPalabra);
+
+        puntaje_errores.setBackground(new java.awt.Color(255, 102, 102));
+        puntaje_errores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                puntaje_erroresActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,24 +111,22 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(147, 147, 147)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(resultado_juego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(ingresar_letra, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(51, 51, 51)
-                            .addComponent(button_ingresarLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(puntaje_errores, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(47, 47, 47)
+                        .addComponent(puntaje_errores, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resultado_juego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(ingresar_letra, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(button_ingresarLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16)))))
+                .addContainerGap(75, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 68, Short.MAX_VALUE)
                 .addComponent(mostrar_titulo_bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,25 +137,19 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addComponent(mostrar_titulo_bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(puntaje_errores, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(puntaje_errores, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ingresar_letra, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(button_ingresarLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(resultado_juego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ingresar_letra, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(button_ingresarLetra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(resultado_juego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -155,6 +168,18 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_ingresarLetraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_ingresarLetraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_ingresarLetraActionPerformed
+
+    private void ingresar_letraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresar_letraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ingresar_letraActionPerformed
+
+    private void puntaje_erroresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntaje_erroresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_puntaje_erroresActionPerformed
 
     private void initComponent() {
         // Tu código de diseño generado por el Form Editor, no lo repito para ahorrar espacio
@@ -175,38 +200,39 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
     private void enviarLetra() {
         String letra = ingresar_letra.getText();
 
+        // Validar que la entrada sea solo una letra
         if (letra.isEmpty() || letra.length() > 1) {
             JOptionPane.showMessageDialog(this, "Por favor, introduce solo una letra.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Enviar la letra al servidor
-        toServer.println(letra);
-
-        // Leer la respuesta del servidor
         try {
+            // Enviar la letra al servidor
+            toServer.println(letra);
+            toServer.flush();  // Asegura que los datos se envíen inmediatamente
+
+            // Leer la respuesta del servidor
             String estadoPalabra = fromServer.readLine();
             String mensajeCorreccion = fromServer.readLine();
             String errores = fromServer.readLine();
             String resultadoJuego = fromServer.readLine();
 
             // Actualizar la interfaz gráfica con la nueva información
-            mostrar_estadoPalabra.setText(estadoPalabra);
-            mostrar_mensajeCorreccion.setText(mensajeCorreccion);
-            puntaje_errores.setText("Errores: " + errores);
+            mostrar_estadoPalabra.setText(estadoPalabra);  // Actualiza el estado de la palabra
+            mostrar_mensajeCorreccion.setText(mensajeCorreccion);  // Muestra si la letra fue correcta o incorrecta
+            puntaje_errores.setText("Errores: " + errores);  // Muestra los errores acumulados
 
             // Verificar si el juego ha terminado
             if (!resultadoJuego.equals("CONTINUA")) {
-                resultado_juego.showMessageDialog(this, resultadoJuego);
-                // Cerrar conexión al finalizar el juego
-                client.close();
+                resultado_juego.showMessageDialog(this, resultadoJuego);  // Mostrar mensaje de ganado o perdido
+                client.close();  // Cerrar conexión cuando el juego termine
+                button_ingresarLetra.setEnabled(false);  // Deshabilitar el botón de ingresar letras
             }
+
         } catch (Exception e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error al comunicar con el servidor.", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
-        // Enviar la letra al servidor
-        toServer.println(letra);
 
         // Limpia el campo de texto
         ingresar_letra.setText("");
@@ -317,7 +343,7 @@ public class FormClienteAhorcado extends javax.swing.JDialog {
     private javax.swing.JTextArea mostrar_estadoPalabra;
     private javax.swing.JTextArea mostrar_mensajeCorreccion;
     private javax.swing.JLabel mostrar_titulo_bienvenida;
-    private java.awt.Label puntaje_errores;
+    private javax.swing.JTextField puntaje_errores;
     private javax.swing.JOptionPane resultado_juego;
     // End of variables declaration//GEN-END:variables
 }
