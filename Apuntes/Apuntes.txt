@@ -16,3 +16,12 @@ Buscar una herramienta para VPN entre compañeros hacer para una red privada.
 Tarea factorial y Fibonacci. explicar que pasos hicimos.
 
 Hacer el modo grafico con swean
+
+
+
+Las características de los soquets TCP son que crean un canal de comunicación entre servidor y cliente
+
+
+UDP
+
+Los udp, 

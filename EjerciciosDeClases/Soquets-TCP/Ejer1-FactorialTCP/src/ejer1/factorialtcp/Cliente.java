@@ -27,7 +27,7 @@ public class Cliente {
             
             int opcion = 0;
             
-            while(opcion!=5){
+            while(opcion !=5){
                 System.out.println("\nMENÚ PRINCIPAL");
                 System.out.println("1. Insertar un valor de n: ");
                 System.out.println("2. Calcualr Factorial");
@@ -77,7 +77,7 @@ public class Cliente {
                         break;
                         
                     case 5:
-                        
+                        toServer.println("salir");
                         System.out.println("Salienod..");
                         break;
                      default:

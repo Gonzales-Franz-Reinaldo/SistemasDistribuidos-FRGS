@@ -53,9 +53,9 @@ public class HiloCliente extends Thread{
                 
                 if(juego.terminarJuego()){
                     if(juego.palabraCompletada()){
-                        toClient.println("Usted Ganó.. La palabra a adivinar fue: " + juego.getPalabraCompleta());
+                        toClient.println("Usted Gano.. La palabra a adivinar era: " + juego.getPalabraCompleta());
                     }else{
-                        toClient.println("Usteded perdió.!. La palbra a adivinar es: " + juego.getPalabraCompleta());
+                        toClient.println("Usteded perdio.!. La palabra a adivinar era: " + juego.getPalabraCompleta());
                     }
                 }
             }

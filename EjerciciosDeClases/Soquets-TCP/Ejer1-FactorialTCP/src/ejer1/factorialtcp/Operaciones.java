@@ -11,10 +11,7 @@ public class Operaciones {
     public Operaciones(){
         
     }
-    
-    public Operaciones(int numero){
-        this.numero = numero;
-    }
+ 
 
     public int getNumero() {
         return numero;
