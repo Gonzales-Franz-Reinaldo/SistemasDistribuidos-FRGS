@@ -42,3 +42,7 @@ Metodos del jeugo del ahorcado
 interfaz ahorca, 
 
 El cliente debe tener un menu,
+
+
+
+El servidor RMI 
