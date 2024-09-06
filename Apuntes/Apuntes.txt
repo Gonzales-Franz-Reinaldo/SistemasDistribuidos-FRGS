@@ -46,3 +46,14 @@ El cliente debe tener un menu,
 
 
 El servidor RMI 
+
+
+
+
+TEMA 5
+COMUNICACIÓN INDERECTA
+
+
+Enviar una votación al resultado, y responder la suma de los mensajes en resultado.
+
+como guardar los resultados y como mostrarlos
