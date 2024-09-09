@@ -17,7 +17,7 @@ import java.rmi.*;
  * @author Franz Gonzales
  */
 public class Servidor {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AlreadyBoundException {
         try {
             Operacion operacion = new Operacion();
             LocateRegistry.createRegistry(1099);
