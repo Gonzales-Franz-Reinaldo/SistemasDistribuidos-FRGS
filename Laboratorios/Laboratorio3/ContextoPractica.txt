@@ -1,0 +1,5 @@
+Cliente Universidad -> Cliente RMI
+Servidor Universidad -> Servidor RMI
+ - métodos: EmitirDiploma(Ci, nombreCompleto, carrera, fecha, mensaje)
+ - imprimir informacionen consola -> cuando no hay ningún mensaje, si existe mensaje imprime el mensaje devuelto.
+
