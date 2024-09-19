@@ -2,57 +2,43 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package diplomaacademico;
-
-import java.io.IOException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.util.Scanner;
+package cajeroautomaticormi;
 
 /**
  *
  * @author Franz Gonzales
  */
+
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
 public class ClienteUniversidadRMI {
     public static void main(String[] args) {
-        
-        try{
-            // Conectar al registro RMI en localhost
+        try {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            IUniversidad universidad = (IUniversidad) registry.lookup("Universidad");
 
-            // Buscar el objeto remoto del cajero automático
-            IDiploma diploma = (IDiploma) registry.lookup("DiplomadoAcademico");
+            // Datos del estudiante
+            String ci = "1140506";
+            String nombres = "Walter Jhamil";
+            String primerApellido = "Segovia";
+            String segundoApellido = "Arellano";
+            String fechaNacimiento = "11-02-1996";
+            String carrera = "Ing. en Ciencias de la Computación";
 
-            // Crear el menú para interactuar con el usuario
-            Scanner scanner = new Scanner(System.in);
-            
-            
-            while(true){
-                System.out.println("\n--- DIPLOMA ACADEMICO ---");
-                System.out.println("INTRODUZCA LOS DATOS.");
-                
-                System.out.print("CI: ");
-                String ci = scanner.nextLine();
-                
-                System.out.print("Nombre: ");
-                String nombres = scanner.nextLine();
-                
-                System.out.print("1erApellido: ");
-                String primerApellido = scanner.nextLine();
-                
-                System.out.print("2doApellido: ");
-                String segundoApellido = scanner.nextLine();
-                
-                System.out.print("Fecha Nacimiento: ");
-                String fecha_nacimiento = scanner.nextLine();
-                
-                System.out.print("Carrera: ");
-                String carrera = scanner.nextLine();
+            // Emitir diploma
+            Diploma diploma = universidad.emitirDiploma(ci, nombres, primerApellido, segundoApellido, fechaNacimiento, carrera);
+
+            // Mostrar resultado
+            if (diploma.getMensaje().isEmpty()) {
+                System.out.println("Diploma emitido correctamente:");
+                System.out.println("Nombre Completo: " + diploma.getNombreCompleto());
+                System.out.println("Carrera: " + diploma.getCarrera());
+                System.out.println("Fecha: " + diploma.getFecha());
+            } else {
+                System.out.println("Errores en la emisión del diploma: " + diploma.getMensaje());
             }
-            
-//            scanner.close();
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

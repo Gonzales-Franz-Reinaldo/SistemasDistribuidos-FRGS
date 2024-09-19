@@ -2,29 +2,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package diplomaacademico;
-
-import java.rmi.RemoteException;
-
+package cajeroautomaticormi;
+import java.io.Serializable;
 /**
  *
  * @author Franz Gonzales
  */
-public class Diploma implements IDiploma{
-    
+public class Diploma implements Serializable{
     private String nombreCompleto;
+    private String carrera;
     private String fecha;
     private String mensaje;
 
-    public Diploma() {
-        this.nombreCompleto = "";
-        this.fecha = "";
-        this.mensaje = "";
+    public Diploma(String nombreCompleto, String carrera, String fecha, String mensaje) {
+        this.nombreCompleto = nombreCompleto;
+        this.carrera = carrera;
+        this.fecha = fecha;
+        this.mensaje = mensaje;
     }
 
-    @Override
-    public Diploma emitirDiploma(String ci, String nombres, String primerApellido, String segundoApellido, String fecha_nacimiento, String carrera) throws RemoteException {
-        return new Diploma();
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
-    
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
 }
