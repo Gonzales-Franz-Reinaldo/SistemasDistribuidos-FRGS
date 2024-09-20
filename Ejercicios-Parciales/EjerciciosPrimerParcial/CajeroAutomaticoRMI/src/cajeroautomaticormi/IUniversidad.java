@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package cajeroautomaticormi;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 /**

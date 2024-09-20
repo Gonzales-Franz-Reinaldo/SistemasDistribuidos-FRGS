@@ -1,4 +1,4 @@
-package cajeroautomaticormi;
+package diplomaacademico;
 
 import java.net.*;
 import java.io.*;
