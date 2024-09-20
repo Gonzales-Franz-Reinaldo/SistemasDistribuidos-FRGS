@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author Franz Gonzales
  */
 public class JuezRMI {
+    
      public static void main(String[] args) {
          Scanner scanner = new Scanner(System.in);
         try {
@@ -57,7 +58,7 @@ public class JuezRMI {
                             banco = Banco.BancoBCP; 
                         }
                         
-                        cuenta.retenerMonto(cuenta, monto);
+//                        cuenta.retenerMonto(cuenta, monto);
 
                         break;
                }
@@ -66,5 +67,9 @@ public class JuezRMI {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+     
+    public static void ListaCuentas(){
+        
     }
 }
