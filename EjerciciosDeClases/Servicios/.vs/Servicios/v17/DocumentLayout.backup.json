@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\",
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|c:\\netbeansprojects\\sis258-frgs\\ejerciciosdeclases\\servicios\\servicios\\segip.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|c:\\xampp\\htdocs\\sistemasdistribuidos-frgs\\ejerciciosdeclases\\servicios\\servicios\\segip.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|solutionrelative:servicios\\segip.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|solutionrelative:servicios\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\clases\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\clases\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|solutionrelative:servicios\\clases\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\database\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\database\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|solutionrelative:servicios\\database\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\operaciones.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\servicios\\operaciones.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FD9D8F8-5BAC-4B1B-9F35-094D5953C5D8}|Servicios\\Servicios.csproj|solutionrelative:servicios\\operaciones.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,9 +36,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Persona.cs",
-              "DocumentMoniker": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Clases\\Persona.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Clases\\Persona.cs",
               "RelativeDocumentMoniker": "Servicios\\Clases\\Persona.cs",
-              "ToolTip": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Clases\\Persona.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Clases\\Persona.cs",
               "RelativeToolTip": "Servicios\\Clases\\Persona.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAwwBYAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -48,9 +48,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DatabaseConnection.cs",
-              "DocumentMoniker": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Database\\DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Database\\DatabaseConnection.cs",
               "RelativeDocumentMoniker": "Servicios\\Database\\DatabaseConnection.cs",
-              "ToolTip": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Database\\DatabaseConnection.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Database\\DatabaseConnection.cs",
               "RelativeToolTip": "Servicios\\Database\\DatabaseConnection.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAywCEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,11 +60,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Segip.asmx.cs",
-              "DocumentMoniker": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Segip.asmx.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Segip.asmx.cs",
               "RelativeDocumentMoniker": "Servicios\\Segip.asmx.cs",
-              "ToolTip": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Segip.asmx.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Segip.asmx.cs",
               "RelativeToolTip": "Servicios\\Segip.asmx.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T19:33:20.331Z",
               "EditorCaption": ""
@@ -73,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Web.config",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Web.config",
               "RelativeDocumentMoniker": "Servicios\\Web.config",
-              "ToolTip": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Web.config",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Web.config",
               "RelativeToolTip": "Servicios\\Web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -86,9 +86,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Operaciones.asmx.cs",
-              "DocumentMoniker": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Operaciones.asmx.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Operaciones.asmx.cs",
               "RelativeDocumentMoniker": "Servicios\\Operaciones.asmx.cs",
-              "ToolTip": "C:\\NetBeansProjects\\SIS258-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Operaciones.asmx.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\EjerciciosDeClases\\Servicios\\Servicios\\Operaciones.asmx.cs",
               "RelativeToolTip": "Servicios\\Operaciones.asmx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

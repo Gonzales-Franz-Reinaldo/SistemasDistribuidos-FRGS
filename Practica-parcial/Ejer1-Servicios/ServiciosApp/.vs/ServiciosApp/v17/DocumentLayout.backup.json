@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|c:\\xampp\\htdocs\\sistemasdistribuidos-frgs\\practica-parcial\\ejer1-servicios\\serviciosapp\\serviciosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|solutionrelative:serviciosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|c:\\xampp\\htdocs\\sistemasdistribuidos-frgs\\practica-parcial\\ejer1-servicios\\serviciosapp\\serviciosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|solutionrelative:serviciosapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|c:\\xampp\\htdocs\\sistemasdistribuidos-frgs\\practica-parcial\\ejer1-servicios\\serviciosapp\\serviciosapp\\pronostico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDA06E80-1918-49E3-9424-40D7B34BD072}|ServiciosApp\\ServiciosApp.csproj|solutionrelative:serviciosapp\\pronostico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pronostico.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Pronostico.cs",
+              "RelativeDocumentMoniker": "ServiciosApp\\Pronostico.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Pronostico.cs",
+              "RelativeToolTip": "ServiciosApp\\Pronostico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:09:19.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Form1.cs",
+              "RelativeDocumentMoniker": "ServiciosApp\\Form1.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Form1.cs",
+              "RelativeToolTip": "ServiciosApp\\Form1.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAuwIQBAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T02:25:44.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Form1.cs",
+              "RelativeDocumentMoniker": "ServiciosApp\\Form1.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\SistemasDistribuidos-FRGS\\Practica-parcial\\Ejer1-Servicios\\ServiciosApp\\ServiciosApp\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ServiciosApp\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T02:13:52.996Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
